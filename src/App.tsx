@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Login from './Components/Authentication/Login/Login';
+import Admin from './Components/Admin/Admin';
+import { AuthProvider, useAuth } from './Components/Contexts/AuthContext';
+import { Navigate } from 'react-router-dom';
+import Blogs from './Components/Admin/Blogs/Blogs';
+import Architecture from './Components/Admin/Architecture/Architecture';
+import ITBlogs from './Components/Admin/IT/ITBlogs';
+
+
+const PrivateRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
+  const { checkToken } = useAuth();
+
+  return checkToken() ? element : <Navigate to="/" replace />;
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Login />}/>
+          <Route path='/admin' element={<PrivateRoute element={<Admin />} />}/>
+          <Route path="/blogs" element={<Blogs />}/>
+          <Route path="/architect" element={<Architecture />}/>
+          <Route path='/itblogs' element={<ITBlogs />}/>
+        </Routes>
+      </AuthProvider>
     </div>
   );
 }

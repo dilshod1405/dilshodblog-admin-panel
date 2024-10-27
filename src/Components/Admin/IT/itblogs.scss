@@ -1,0 +1,50 @@
+.itblog{
+    display: flex;
+
+    .content{
+        padding-top: 2%;
+
+        h1{
+            color: #39d4ba;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        form{
+
+            input{
+                background-color: #39d4ba4f;
+                width: 700px;
+                color: #fff;
+                padding: 10px;
+                border: #39d4ba 1px solid;
+                font-size: 18px;
+                margin-top: 3%;
+                display: block;
+            }
+
+            button{
+                margin-top: 3%;
+                background-color: #39d4ba;
+                
+            }
+        }
+
+        li{
+            display: flex;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            h2{
+                color: #fff;
+            }
+
+            button{
+                
+                background-color: #39d4ba;
+                margin: 5px;
+            }
+        }
+    }
+}

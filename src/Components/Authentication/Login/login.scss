@@ -1,0 +1,58 @@
+.login{
+    .content{
+        text-align: center;
+        margin-top: 7%;
+
+        h1{
+            text-align: center;
+            color: #39d4ba;
+            font-size: 40px;
+        }
+
+        form{
+            border: #39d4ba 1px solid;
+            border-radius: 10px;
+            margin-top: 7%;
+            padding-bottom: 5%;
+            width: 40%;
+            margin: auto;
+            div{
+                padding-top: 1%;
+            }
+
+            button{
+                margin-top: 3%;
+                background-color: #39d4ba;
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width: 850px) and (min-width: 360px) {
+    .login{
+        .content{
+            margin-top: 15%;
+
+            h1{
+                font-size: 55;
+            }
+
+            form{
+                width: 300px;
+                margin-top: 3%;
+                div{
+                    padding-top: 3%;
+                }
+                button{
+                    margin-top: 5%;
+                }
+
+                p{
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+}

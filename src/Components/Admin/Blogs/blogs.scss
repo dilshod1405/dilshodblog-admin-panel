@@ -1,0 +1,48 @@
+.blogs{
+    display: flex;
+
+    h1{
+        color: #39d4ba;
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .inputs{
+        padding-top: 2%;
+
+        input{
+            background-color: #39d4ba4f;
+            width: 700px;
+            color: #fff;
+            padding: 10px;
+            border: #39d4ba 1px solid;
+            font-size: 18px;
+            margin-top: 3%;
+            display: block;
+        }
+
+        button{
+            margin-top: 3%;
+            background-color: #39d4ba;
+        }
+    }
+
+    .deleter{
+        padding-top: 5%;
+
+        li{
+            margin-top: 2%;
+            display: flex;
+
+            h2{
+                color: #fff;
+            }
+
+            button{
+                margin-left: 2%;
+                background-color: #39d4ba;
+                padding: 5px;
+            }
+        }
+    }
+}
