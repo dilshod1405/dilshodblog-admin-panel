@@ -1,2 +1,2 @@
-This is my admin panel which I can manage all posts of dil-shod.uz blog website. 
+This is my admin panel which I can manage all posts of https://dil-shod.uz blog website. 
 I have developed it in react typescript. I have used AuthProvider to check authentication of visitor. I mean, when user opens this page, authprovider navigates it to login page in mandatory manner, if user is not logged by its token, username and login. Axios technology is used in this project for CRUD requesting with backend.
